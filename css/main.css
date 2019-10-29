@@ -1,0 +1,83 @@
+body {
+  color: rgb(65, 75, 86);
+  font-family: arial;
+}
+
+div {
+  min-height: 100vh; /*makes it adapt to the device dimensions, i.e. divs are far apart when on full screen but really close if you make the browser window really short*/
+  width: 100vw;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em; /*multiply the value of this font element by 5 - uses browser default font size*/
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+img {
+  display: flex; /*display dictates layout. flex means flexible... will be explained more later*/
+  padding: 20px;
+  margin: 0 auto; /*short hand notation for setting top/bottom to 0 and left/right to automatic. the img displays in the middle because we have 'auto' padding left and right*/
+  border-radius: 130px; /*tells us how much to round the corners of the image - 130px will make them disappear; this is specific to the size of the image*/
+}
+
+p {
+  width: 40%; /*makes it 40% of the width of parent element - if you shrink the window, the margin won't change but the width of the text will get smaller - width is a relative value, margin is absolute value*/
+  margin: 10vh 10vw;
+  font-size: 2em;
+}
+
+a {
+  color: rgb(0, 0, 0)
+}
+
+ol {
+  list-style: none; /*this removes the numbers*/
+  padding: 0;
+  margin-bottom: 10%;
+  font-size: 3em;
+  display: flex; /*gives options of how to display content - see below*/
+  justify-content: space-evenly;/*will space the content evenly within the element dimensions - wouldn't work if display was in block, needs to be in flex*/
+}
+
+li#lower {
+  margin-top: 7%;
+}
+
+li#lowest {
+  margin-top: 14%;
+}
+
+div.contrast {
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  display: flex;
+  justify-content: center;/*horizontal alignment*/
+  align-items: center; /*verticle alignment*/
+  flex-direction: column; /*when you resize the browser, the text will stack within its own column*/
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+  transition: 0.6s ease;
+}
+
+li:hover { /*the colon means when the item is in a certain state (i.e. mouse is hovering) apply this action*/
+  font-size: 1.2em;
+  color: pink;
+}
+
+
+/* .item li.item ul .item ul li.item - all options for using class selectors*/
+/*IDs must be a unique value only used once on a html page - class is not unique and can be added to multiple elements you want to style in the same way*/
